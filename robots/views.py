@@ -12,13 +12,10 @@ else:
     from django.core.urlresolvers import NoReverseMatch, reverse
 
 from wagtail import VERSION as WAGTAIL_VERSION # noqa
-if WAGTAIL_VERSION >= (2, 0):
-    from wagtail.models import Site
-    from wagtail.contrib.sitemaps.views import sitemap
 
-else:
-    from wagtail.wagtailcore.models import Site
-    from wagtail.contrib.wagtailsitemaps.views import sitemap
+from wagtail.models import Site
+from wagtail.contrib.sitemaps.views import sitemap
+
 
 
 class RuleList(ListView):

@@ -3,10 +3,8 @@ from distutils.version import LooseVersion
 from django.conf import settings
 
 from wagtail import VERSION as WAGTAIL_VERSION
-if WAGTAIL_VERSION >= (2, 0):
-    from wagtail.admin.edit_handlers import InlinePanel
-else:
-    from wagtail.wagtailadmin.edit_handlers import InlinePanel
+from wagtail.admin.panels import InlinePanel
+
 
 
 def WrappedInlinepanel(relation_name, heading='', label='',

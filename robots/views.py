@@ -13,7 +13,7 @@ else:
 
 from wagtail import VERSION as WAGTAIL_VERSION # noqa
 if WAGTAIL_VERSION >= (2, 0):
-    from wagtail.core.models import Site
+    from wagtail.models import Site
     from wagtail.contrib.sitemaps.views import sitemap
 
 else:
